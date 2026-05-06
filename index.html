@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -9,70 +10,70 @@
 * { margin:0; padding:0; box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 
 body {
-  background: #f0f0f0;
-  font-family: 'Barlow Condensed', sans-serif;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+background: #f0f0f0;
+font-family: ‘Barlow Condensed’, sans-serif;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 /* HEADER */
 .header {
-  width: 100%;
-  background: #0033A0;
-  padding: 16px 18px 14px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  border-bottom: 3px solid #F5C518;
+width: 100%;
+background: #0033A0;
+padding: 16px 18px 14px;
+display: flex;
+justify-content: space-between;
+align-items: flex-end;
+border-bottom: 3px solid #F5C518;
 }
 .header-left {}
 .header-title {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  color: #F5C518;
-  letter-spacing: 2px;
-  line-height: 1;
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 2rem;
+color: #F5C518;
+letter-spacing: 2px;
+line-height: 1;
 }
 .header-sub {
-  font-size: 0.7rem;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  margin-top: 2px;
+font-size: 0.7rem;
+color: rgba(255,255,255,0.5);
+letter-spacing: 2px;
+text-transform: uppercase;
+margin-top: 2px;
 }
 .header-right { text-align: right; }
 .header-count {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 2rem;
-  color: #fff;
-  line-height: 1;
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 2rem;
+color: #fff;
+line-height: 1;
 }
 .header-count-label {
-  font-size: 0.65rem;
-  color: rgba(255,255,255,0.5);
-  letter-spacing: 2px;
-  text-transform: uppercase;
+font-size: 0.65rem;
+color: rgba(255,255,255,0.5);
+letter-spacing: 2px;
+text-transform: uppercase;
 }
 
 /* TABS */
 .tabs {
-  width: 100%;
-  background: #111111;
-  display: flex;
+width: 100%;
+background: #111111;
+display: flex;
 }
 .tab {
-  flex: 1;
-  padding: 13px 8px 11px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.95rem;
-  letter-spacing: 2px;
-  color: rgba(255,255,255,0.35);
-  text-align: center;
-  cursor: pointer;
-  border-bottom: 3px solid transparent;
-  transition: all 0.15s;
+flex: 1;
+padding: 13px 8px 11px;
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 0.95rem;
+letter-spacing: 2px;
+color: rgba(255,255,255,0.35);
+text-align: center;
+cursor: pointer;
+border-bottom: 3px solid transparent;
+transition: all 0.15s;
 }
 .tab.active { color: #F5C518; border-bottom-color: #F5C518; }
 
@@ -81,37 +82,37 @@ body {
 .tab-content.active { display: flex; }
 
 /* ══════════════════════════════
-   LINEUP TAB
+LINEUP TAB
 ══════════════════════════════ */
 .formation-bar {
-  background: #0a2a5a;
-  display: flex;
-  justify-content: center;
-  gap: 6px;
-  padding: 8px 10px;
-  flex-wrap: wrap;
+background: #0a2a5a;
+display: flex;
+justify-content: center;
+gap: 6px;
+padding: 8px 10px;
+flex-wrap: wrap;
 }
 .form-btn {
-  background: transparent;
-  border: 1px solid rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.45);
-  padding: 3px 10px;
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 0.85rem;
-  letter-spacing: 1px;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.15s;
+background: transparent;
+border: 1px solid rgba(255,255,255,0.2);
+color: rgba(255,255,255,0.45);
+padding: 3px 10px;
+font-family: ‘Bebas Neue’, sans-serif;
+font-size: 0.85rem;
+letter-spacing: 1px;
+border-radius: 4px;
+cursor: pointer;
+transition: all 0.15s;
 }
 .form-btn.active { background: #F5C518; color: #000; border-color: #F5C518; }
 
 .pitch {
-  width: 100%;
-  aspect-ratio: 7/10;
-  background: #1a5c2a;
-  position: relative;
-  overflow: hidden;
-  background-image: repeating-linear-gradient(180deg,transparent,transparent 9%,rgba(0,0,0,0.06) 9%,rgba(0,0,0,0.06) 18%);
+width: 100%;
+aspect-ratio: 7/10;
+background: #1a5c2a;
+position: relative;
+overflow: hidden;
+background-image: repeating-linear-gradient(180deg,transparent,transparent 9%,rgba(0,0,0,0.06) 9%,rgba(0,0,0,0.06) 18%);
 }
 .pitch-lines { position:absolute; inset:0; pointer-events:none; }
 .pitch-lines svg { width:100%; height:100%; }
@@ -137,154 +138,154 @@ body {
 .leg-dot { width:7px; height:7px; border-radius:50%; }
 
 .roster-panel { background: #111111; border-top:3px solid #F5C518; padding:14px; }
-.panel-title { font-family:'Bebas Neue',sans-serif; font-size:1rem; letter-spacing:2px; color:#F5C518; margin-bottom:10px; }
+.panel-title { font-family:‘Bebas Neue’,sans-serif; font-size:1rem; letter-spacing:2px; color:#F5C518; margin-bottom:10px; }
 .roster-list { display:flex; flex-wrap:wrap; gap:5px; margin-bottom:10px; }
 .roster-chip { background:#1e1e1e; border:1px solid #2e2e2e; color:#fff; padding:4px 9px; border-radius:4px; font-size:0.72rem; font-weight:700; letter-spacing:0.5px; text-transform:uppercase; cursor:pointer; user-select:none; }
 .roster-chip.assigned { border-color:#4caf50; color:#90EE90; }
 .roster-chip.unassigned { border-color:#e05c4f; color:#ff9999; }
 
 .add-player-row { display:flex; gap:8px; margin-bottom:10px; }
-.new-player-input { flex:1; background:#1e1e1e; border:1px solid #2e2e2e; color:#fff; padding:8px 12px; border-radius:6px; font-family:'Barlow Condensed',sans-serif; font-size:0.9rem; font-weight:600; }
+.new-player-input { flex:1; background:#1e1e1e; border:1px solid #2e2e2e; color:#fff; padding:8px 12px; border-radius:6px; font-family:‘Barlow Condensed’,sans-serif; font-size:0.9rem; font-weight:600; }
 .new-player-input::placeholder { color:#444; }
 .new-player-input:focus { outline:none; border-color:#F5C518; }
-.btn-add { background:#F5C518; color:#000; border:none; padding:8px 14px; font-family:'Bebas Neue',sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:6px; cursor:pointer; white-space:nowrap; }
+.btn-add { background:#F5C518; color:#000; border:none; padding:8px 14px; font-family:‘Bebas Neue’,sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:6px; cursor:pointer; white-space:nowrap; }
 .hint { font-size:0.6rem; color:#444; letter-spacing:1px; text-transform:uppercase; margin-bottom:8px; }
-.btn-clear-all { width:100%; background:transparent; border:1px solid #3a1a1a; color:#e05c4f; padding:9px; font-family:'Bebas Neue',sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:6px; cursor:pointer; }
+.btn-clear-all { width:100%; background:transparent; border:1px solid #3a1a1a; color:#e05c4f; padding:9px; font-family:‘Bebas Neue’,sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:6px; cursor:pointer; }
 .clear-confirm { display:none; margin-top:10px; background:#1a0808; border:1px solid #e05c4f; border-radius:6px; padding:12px; text-align:center; }
 .clear-confirm-text { font-size:0.78rem; color:#ff9999; font-weight:700; letter-spacing:1px; margin-bottom:10px; }
 .clear-confirm-btns { display:flex; gap:8px; justify-content:center; }
-.btn-yes { background:#ff4444; color:#fff; border:none; padding:7px 20px; font-family:'Bebas Neue',sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:5px; cursor:pointer; }
-.btn-no { background:#2a2a2a; color:#aaa; border:none; padding:7px 20px; font-family:'Bebas Neue',sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:5px; cursor:pointer; }
+.btn-yes { background:#ff4444; color:#fff; border:none; padding:7px 20px; font-family:‘Bebas Neue’,sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:5px; cursor:pointer; }
+.btn-no { background:#2a2a2a; color:#aaa; border:none; padding:7px 20px; font-family:‘Bebas Neue’,sans-serif; font-size:0.95rem; letter-spacing:1px; border-radius:5px; cursor:pointer; }
 
 /* ══════════════════════════════
-   PAYMENTS TAB
+PAYMENTS TAB
 ══════════════════════════════ */
 .payments-wrap { padding: 14px; display:flex; flex-direction:column; gap:10px; background:#f0f0f0; }
 
 .pay-summary-card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 16px;
-  margin-bottom: 4px;
+background: #1a1a1a;
+border-radius: 12px;
+padding: 16px;
+margin-bottom: 4px;
 }
 .pay-summary-title {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1rem;
-  letter-spacing:2px;
-  color:#F5C518;
-  margin-bottom:12px;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:1rem;
+letter-spacing:2px;
+color:#F5C518;
+margin-bottom:12px;
 }
 .pay-amount-row { display:flex; align-items:center; justify-content:space-between; margin-bottom:14px; }
 .pay-amount-label { font-size:0.65rem; font-weight:700; letter-spacing:1.5px; text-transform:uppercase; color:#666; }
 .pay-amount-input {
-  background:#111;
-  border:1px solid #2e2e2e;
-  color:#F5C518;
-  padding:6px 12px;
-  border-radius:6px;
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.3rem;
-  letter-spacing:1px;
-  width:100px;
-  text-align:center;
+background:#111;
+border:1px solid #2e2e2e;
+color:#F5C518;
+padding:6px 12px;
+border-radius:6px;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:1.3rem;
+letter-spacing:1px;
+width:100px;
+text-align:center;
 }
 .pay-amount-input:focus { outline:none; border-color:#F5C518; }
 .prog-track { height:5px; background:#333; border-radius:3px; overflow:hidden; margin-bottom:10px; }
 .prog-fill { height:100%; background:#4caf50; border-radius:3px; transition:width 0.4s ease; }
-.pay-stats { display:flex; gap:16px; font-size:0.75rem; font-weight:700; letter-spacing:0.5px; font-family:'Barlow Condensed',sans-serif; }
+.pay-stats { display:flex; gap:16px; font-size:0.75rem; font-weight:700; letter-spacing:0.5px; font-family:‘Barlow Condensed’,sans-serif; }
 .stat-collected { color:#4caf50; }
 .stat-needed { color:#666; }
 .stat-remaining { color:#e05c4f; }
 
 .player-pay-card {
-  background: #1a1a1a;
-  border-radius: 10px;
-  padding: 12px 14px;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  border-left: 3px solid #e05c4f;
-  cursor: pointer;
-  transition: border-color 0.15s;
+background: #1a1a1a;
+border-radius: 10px;
+padding: 12px 14px;
+display: flex;
+align-items: center;
+gap: 12px;
+border-left: 3px solid #e05c4f;
+cursor: pointer;
+transition: border-color 0.15s;
 }
 .player-pay-card.paid { border-left-color: #4caf50; }
 
 .player-avatar {
-  width: 40px; height: 40px;
-  border-radius: 50%;
-  background: #2a2a3a;
-  display: flex; align-items:center; justify-content:center;
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.1rem;
-  color:#888;
-  flex-shrink:0;
+width: 40px; height: 40px;
+border-radius: 50%;
+background: #2a2a3a;
+display: flex; align-items:center; justify-content:center;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:1.1rem;
+color:#888;
+flex-shrink:0;
 }
 
 .player-pay-info { flex:1; }
 .player-pay-name {
-  font-size:0.95rem;
-  font-weight:800;
-  color:#fff;
-  text-transform:uppercase;
-  letter-spacing:0.5px;
+font-size:0.95rem;
+font-weight:800;
+color:#fff;
+text-transform:uppercase;
+letter-spacing:0.5px;
 }
 .player-pay-sub {
-  font-size:0.65rem;
-  font-weight:700;
-  letter-spacing:1px;
-  text-transform:uppercase;
-  margin-top:1px;
+font-size:0.65rem;
+font-weight:700;
+letter-spacing:1px;
+text-transform:uppercase;
+margin-top:1px;
 }
 .sub-owes { color:#666; }
 .sub-paid { color:#4caf50; }
 
 .owes-badge {
-  background: #3a1010;
-  color: #e05c4f;
-  font-family:'Bebas Neue',sans-serif;
-  font-size:0.85rem;
-  letter-spacing:2px;
-  padding:6px 14px;
-  border-radius:6px;
-  flex-shrink:0;
+background: #3a1010;
+color: #e05c4f;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:0.85rem;
+letter-spacing:2px;
+padding:6px 14px;
+border-radius:6px;
+flex-shrink:0;
 }
 .paid-badge {
-  background: #0f2f0f;
-  color: #4caf50;
-  font-family:'Bebas Neue',sans-serif;
-  font-size:0.85rem;
-  letter-spacing:2px;
-  padding:6px 14px;
-  border-radius:6px;
-  flex-shrink:0;
+background: #0f2f0f;
+color: #4caf50;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:0.85rem;
+letter-spacing:2px;
+padding:6px 14px;
+border-radius:6px;
+flex-shrink:0;
 }
 
 /* ══════════════════════════════
-   KITS TAB
+KITS TAB
 ══════════════════════════════ */
 .kits-wrap { padding:14px; display:flex; flex-direction:column; gap:10px; background:#f0f0f0; }
 
 .kit-summary-card {
-  background:#1a1a1a;
-  border-radius:12px;
-  padding:16px;
-  display:flex;
-  justify-content:space-around;
-  margin-bottom:4px;
+background:#1a1a1a;
+border-radius:12px;
+padding:16px;
+display:flex;
+justify-content:space-around;
+margin-bottom:4px;
 }
 .kit-stat { text-align:center; }
 .kit-stat-num {
-  font-family:'Bebas Neue',sans-serif;
-  font-size:1.8rem;
-  line-height:1;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:1.8rem;
+line-height:1;
 }
 .kit-stat-label {
-  font-size:0.6rem;
-  font-weight:700;
-  letter-spacing:1.5px;
-  text-transform:uppercase;
-  color:#555;
-  margin-top:2px;
+font-size:0.6rem;
+font-weight:700;
+letter-spacing:1.5px;
+text-transform:uppercase;
+color:#555;
+margin-top:2px;
 }
 .num-black { color:#fff; }
 .num-yellow { color:#F5C518; }
@@ -292,61 +293,105 @@ body {
 .num-nokit { color:#e05c4f; }
 
 .player-kit-card {
-  background:#1a1a1a;
-  border-radius:10px;
-  padding:13px 14px;
-  display:flex;
-  align-items:center;
-  gap:12px;
+background:#1a1a1a;
+border-radius:10px;
+padding:13px 14px;
+display:flex;
+align-items:center;
+gap:12px;
 }
 .player-kit-name {
-  flex:1;
-  font-size:0.95rem;
-  font-weight:800;
-  color:#fff;
-  text-transform:uppercase;
-  letter-spacing:0.5px;
+flex:1;
+font-size:0.95rem;
+font-weight:800;
+color:#fff;
+text-transform:uppercase;
+letter-spacing:0.5px;
 }
 .kit-btns { display:flex; gap:6px; }
 .kit-btn {
-  width:36px; height:36px;
-  border-radius:7px;
-  border:1.5px solid #333;
-  background:#1a1a1a;
-  font-family:'Bebas Neue',sans-serif;
-  font-size:0.8rem;
-  letter-spacing:0.5px;
-  color:#444;
-  cursor:pointer;
-  display:flex; align-items:center; justify-content:center;
-  transition:all 0.15s;
-  user-select:none;
+width:36px; height:36px;
+border-radius:7px;
+border:1.5px solid #333;
+background:#1a1a1a;
+font-family:‘Bebas Neue’,sans-serif;
+font-size:0.8rem;
+letter-spacing:0.5px;
+color:#444;
+cursor:pointer;
+display:flex; align-items:center; justify-content:center;
+transition:all 0.15s;
+user-select:none;
 }
 .kit-btn.on-black { background:#2a2a2a; border-color:#ccc; color:#fff; }
 .kit-btn.on-yellow { background:#2a2000; border-color:#F5C518; color:#F5C518; }
 .kit-btn.on-keeper { background:#0a1a3a; border-color:#6ab0ff; color:#6ab0ff; }
+.kit-btn.on-shorts { background:#1a2a1a; border-color:#4caf50; color:#4caf50; }
+.kit-btn.on-owns { background:#0a2000; border-color:#4caf50; color:#4caf50; }
+.kit-btn.on-borrow { background:#2a1a00; border-color:#F5C518; color:#F5C518; }
+.kit-btn.locked { opacity:0.25; pointer-events:none; }
+.kit-num { font-size:0.7rem; font-weight:800; color:#F5C518; margin-top:2px; text-align:center; }
+.kit-col { display:flex; flex-direction:column; align-items:center; gap:2px; }
+.section-hdr { font-family:‘Bebas Neue’,sans-serif; font-size:0.85rem; letter-spacing:2px; color:#555; padding:10px 0 6px; border-bottom:1px solid #2e2e2e; margin-bottom:8px; }
+.spare-card { background:#1a1a1a; border-radius:8px; padding:10px 12px; display:flex; align-items:center; gap:10px; margin-bottom:6px; }
+.spare-badge { font-family:‘Bebas Neue’,sans-serif; font-size:0.8rem; padding:3px 8px; border-radius:4px; flex-shrink:0; }
+.sb-black { background:#2a2a2a; border:1px solid #ccc; color:#fff; }
+.sb-yellow { background:#2a2000; border:1px solid #F5C518; color:#F5C518; }
+.spare-num { font-size:1rem; font-weight:800; color:#fff; flex:1; }
+.spare-assign-btn { background:#0033A0; color:#fff; border:none; padding:5px 10px; font-family:‘Bebas Neue’,sans-serif; font-size:0.75rem; letter-spacing:1px; border-radius:4px; cursor:pointer; }
+.spare-del-btn { background:#3a1010; color:#e05c4f; border:none; padding:5px 8px; font-family:‘Bebas Neue’,sans-serif; font-size:0.75rem; border-radius:4px; cursor:pointer; }
+.add-spare-row { display:flex; gap:6px; margin-bottom:10px; align-items:center; flex-wrap:wrap; }
+.spare-color-btn { padding:5px 10px; font-family:‘Bebas Neue’,sans-serif; font-size:0.78rem; letter-spacing:1px; border-radius:4px; cursor:pointer; border:1px solid #333; background:#1a1a1a; color:#666; }
+.spare-color-btn.sel-black { background:#2a2a2a; border-color:#ccc; color:#fff; }
+.spare-color-btn.sel-yellow { background:#2a2000; border-color:#F5C518; color:#F5C518; }
+.spare-num-input { background:#1a1a1a; border:1px solid #333; color:#fff; padding:5px 8px; border-radius:4px; font-family:‘Bebas Neue’,sans-serif; font-size:1rem; width:60px; text-align:center; }
+.spare-num-input:focus { outline:none; border-color:#F5C518; }
+.spare-add-btn { background:#F5C518; color:#000; border:none; padding:5px 12px; font-family:‘Bebas Neue’,sans-serif; font-size:0.82rem; letter-spacing:1px; border-radius:4px; cursor:pointer; }
+.order-card { background:#1a1a1a; border-radius:10px; padding:14px; margin-bottom:10px; }
+.order-title { font-family:‘Bebas Neue’,sans-serif; font-size:0.9rem; letter-spacing:2px; color:#F5C518; margin-bottom:8px; }
+.order-line { font-size:0.78rem; color:#ccc; font-weight:600; margin-bottom:3px; }
+.order-nums { font-size:0.68rem; color:#666; margin-bottom:6px; }
+/* Kit number modal */
+.kit-modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:200; align-items:flex-end; justify-content:center; }
+.kit-modal.open { display:flex; }
+.kit-modal-box { background:#161616; border-top:3px solid #F5C518; border-radius:14px 14px 0 0; width:100%; max-width:520px; padding:20px 18px 24px; height:80vh; display:flex; flex-direction:column; animation:slideUp 0.2s ease; }
+.kit-modal-title { font-family:‘Bebas Neue’,sans-serif; font-size:1.2rem; letter-spacing:2px; color:#F5C518; margin-bottom:6px; }
+.kit-modal-sub { font-size:0.65rem; color:#666; letter-spacing:1px; text-transform:uppercase; margin-bottom:14px; }
+.kit-status-row { display:flex; gap:8px; margin-bottom:14px; }
+.kit-status-opt { flex:1; padding:10px 6px; text-align:center; font-family:‘Bebas Neue’,sans-serif; font-size:0.9rem; letter-spacing:1px; border-radius:7px; border:1.5px solid #333; color:#555; cursor:pointer; background:#1a1a1a; transition:all 0.15s; }
+.kit-status-opt.sel-owns { border-color:#4caf50; color:#4caf50; background:#0a2000; }
+.kit-status-opt.sel-borrow { border-color:#F5C518; color:#F5C518; background:#2a1a00; }
+.kit-status-opt.sel-none { border-color:#e05c4f; color:#e05c4f; background:#2a0808; }
+.num-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; overflow-y:auto; flex:1; margin-bottom:10px; padding-bottom:4px; min-height:0; }
+.num-cell { height:40px; border-radius:6px; border:1.5px solid #2e2e2e; background:#1a1a1a; display:flex; align-items:center; justify-content:center; font-family:‘Bebas Neue’,sans-serif; font-size:1rem; color:#555; cursor:pointer; transition:all 0.15s; }
+.num-cell.taken { background:#2a1a1a; border-color:#e05c4f; color:#e05c4f; cursor:not-allowed; }
+.num-cell.selected { background:#0033A0; border-color:#6ab0ff; color:#fff; }
+.num-cell.available { color:#ccc; }
+.num-cell.available:active { background:#0033A0; }
+.kit-modal-save { background:#F5C518; color:#000; border:none; padding:12px; font-family:‘Bebas Neue’,sans-serif; font-size:1.05rem; letter-spacing:1px; border-radius:7px; cursor:pointer; width:100%; flex-shrink:0; margin-top:auto; }
 
 /* ══════════════════════════════
-   MODAL
+MODAL
 ══════════════════════════════ */
 .modal-overlay { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:100; align-items:flex-end; justify-content:center; }
 .modal-overlay.open { display:flex; }
 .modal { background:#161616; border:1px solid #2e2e2e; border-top:3px solid #F5C518; border-radius:14px 14px 0 0; width:100%; max-width:520px; padding:20px 18px 32px; max-height:80vh; overflow-y:auto; animation:slideUp 0.2s ease; }
 @keyframes slideUp { from{transform:translateY(60px);opacity:0} to{transform:translateY(0);opacity:1} }
 .modal-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:18px; }
-.modal-title { font-family:'Bebas Neue',sans-serif; font-size:1.4rem; letter-spacing:2px; color:#F5C518; line-height:1; }
+.modal-title { font-family:‘Bebas Neue’,sans-serif; font-size:1.4rem; letter-spacing:2px; color:#F5C518; line-height:1; }
 .modal-pos { font-size:0.65rem; color:#666; letter-spacing:1px; text-transform:uppercase; margin-top:2px; }
 .close-btn { background:#2a2a2a; border:none; color:#fff; width:30px; height:30px; border-radius:50%; font-size:1rem; cursor:pointer; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .tier-block { margin-bottom:14px; }
 .tier-label { font-size:0.62rem; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; margin-bottom:6px; display:flex; align-items:center; gap:6px; }
 .tl-1{color:#fff} .tl-2{color:#a8d8ff} .tl-3{color:#ffa8a8}
 .tl-dot { width:6px; height:6px; border-radius:50%; background:currentColor; }
-.player-select { width:100%; background:#1e1e1e; border:1px solid #2e2e2e; color:#fff; padding:10px 12px; border-radius:7px; font-family:'Barlow Condensed',sans-serif; font-size:0.95rem; font-weight:700; text-transform:uppercase; appearance:none; cursor:pointer; }
+.player-select { width:100%; background:#1e1e1e; border:1px solid #2e2e2e; color:#fff; padding:10px 12px; border-radius:7px; font-family:‘Barlow Condensed’,sans-serif; font-size:0.95rem; font-weight:700; text-transform:uppercase; appearance:none; cursor:pointer; }
 .player-select:focus { outline:none; border-color:#F5C518; }
 .modal-actions { display:flex; gap:8px; margin-top:20px; }
-.btn-save { flex:1; background:#F5C518; color:#000; border:none; padding:12px; font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:1px; border-radius:7px; cursor:pointer; }
-.btn-cancel { background:#252525; color:#aaa; border:none; padding:12px 18px; font-family:'Bebas Neue',sans-serif; font-size:1.05rem; letter-spacing:1px; border-radius:7px; cursor:pointer; }
+.btn-save { flex:1; background:#F5C518; color:#000; border:none; padding:12px; font-family:‘Bebas Neue’,sans-serif; font-size:1.05rem; letter-spacing:1px; border-radius:7px; cursor:pointer; }
+.btn-cancel { background:#252525; color:#aaa; border:none; padding:12px 18px; font-family:‘Bebas Neue’,sans-serif; font-size:1.05rem; letter-spacing:1px; border-radius:7px; cursor:pointer; }
 </style>
+
 </head>
 <body>
 
@@ -368,6 +413,7 @@ body {
 </div>
 
 <!-- ═══ LINEUP TAB ═══ -->
+
 <div class="tab-content active" id="tab-lineup">
   <div class="formation-bar">
     <button class="form-btn active" onclick="setFormation('4-3-3',this)">4-3-3</button>
@@ -426,6 +472,7 @@ body {
 </div>
 
 <!-- ═══ PAYMENTS TAB ═══ -->
+
 <div class="tab-content" id="tab-payments">
   <div class="payments-wrap">
     <div class="pay-summary-card">
@@ -446,31 +493,58 @@ body {
 </div>
 
 <!-- ═══ KITS TAB ═══ -->
+
 <div class="tab-content" id="tab-kits">
   <div class="kits-wrap">
+    <!-- Summary -->
     <div class="kit-summary-card">
-      <div class="kit-stat">
-        <div class="kit-stat-num num-black" id="countBlack">0</div>
-        <div class="kit-stat-label">Black</div>
-      </div>
-      <div class="kit-stat">
-        <div class="kit-stat-num num-yellow" id="countYellow">0</div>
-        <div class="kit-stat-label">Yellow</div>
-      </div>
-      <div class="kit-stat">
-        <div class="kit-stat-num num-keeper" id="countKeeper">1</div>
-        <div class="kit-stat-label">Keeper</div>
-      </div>
-      <div class="kit-stat">
-        <div class="kit-stat-num num-nokit" id="countNoKit">23</div>
-        <div class="kit-stat-label">No Kit</div>
-      </div>
+      <div class="kit-stat"><div class="kit-stat-num num-black" id="countBlack">0</div><div class="kit-stat-label">Black</div></div>
+      <div class="kit-stat"><div class="kit-stat-num num-yellow" id="countYellow">0</div><div class="kit-stat-label">Yellow</div></div>
+      <div class="kit-stat"><div class="kit-stat-num" style="color:#4caf50" id="countShorts">0</div><div class="kit-stat-label">Shorts</div></div>
+      <div class="kit-stat"><div class="kit-stat-num num-keeper" id="countKeeper">0</div><div class="kit-stat-label">Keeper</div></div>
+      <div class="kit-stat"><div class="kit-stat-num num-nokit" id="countNoKit">0</div><div class="kit-stat-label">No Kit</div></div>
     </div>
+    <!-- Order Summary -->
+    <div class="order-card" id="orderSummary"></div>
+    <!-- Player list -->
+    <div class="section-hdr">Player Kits — tap to assign</div>
     <div id="kitsList"></div>
+    <!-- Spare kits -->
+    <div class="section-hdr" style="margin-top:14px">Spare Kits at Home</div>
+    <div class="add-spare-row">
+      <div id="spareBlackBtn" class="spare-color-btn sel-black" onclick="selSpareColor('black')">Black</div>
+      <div id="spareYellowBtn" class="spare-color-btn" onclick="selSpareColor('yellow')">Yellow</div>
+      <input type="number" id="spareNumInput" class="spare-num-input" placeholder="#" min="1" max="99"/>
+      <button class="spare-add-btn" onclick="addSpare()">+ Add</button>
+    </div>
+    <div id="spareList"></div>
+  </div>
+</div>
+
+<!-- Kit Assignment Modal -->
+
+<div class="kit-modal" id="kitModal">
+  <div class="kit-modal-box">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:4px;">
+      <div class="kit-modal-title" id="kmTitle">Assign Kit</div>
+      <button class="kit-modal-save" onclick="kmSave()" style="width:auto;padding:8px 18px;margin-top:0;">Save</button>
+    </div>
+    <div class="kit-modal-sub" id="kmSub"></div>
+    <div class="kit-status-row">
+      <div class="kit-status-opt" id="kmOwns" onclick="kmSetStatus('owns')">Owns</div>
+      <div class="kit-status-opt" id="kmBorrow" onclick="kmSetStatus('borrow')">Borrows</div>
+      <div class="kit-status-opt" id="kmNone" onclick="kmSetStatus('none')">None</div>
+    </div>
+    <div id="kmNumSection">
+      <div style="font-size:0.62rem;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px;">Select number — red = taken</div>
+      <div class="num-grid" id="kmNumGrid"></div>
+    </div>
+
   </div>
 </div>
 
 <!-- Position Modal -->
+
 <div class="modal-overlay" id="modal">
   <div class="modal">
     <div class="modal-header">
@@ -537,9 +611,42 @@ let playerData = _saved ? _saved.playerData : {};
 let assignments = _saved ? _saved.assignments : {};
 let wasCleared = _saved ? _saved.wasCleared : false;
 const _savedAmount = _saved ? _saved.amount : '130';
+let spareKits = (_saved && _saved.spareKits) ? _saved.spareKits : [];
 
 function initPlayer(name) {
-  playerData[name] = playerData[name] || { paid: false, kits: { black: false, yellow: false, keeper: name === 'Tolik' } };
+  if (!playerData[name]) {
+    playerData[name] = {
+      paid: false,
+      kits: {
+        blackStatus: 'none', blackNum: null,
+        yellowStatus: 'none', yellowNum: null,
+        shorts: false,
+        keeper: name === 'Tolik',
+        orderBlack: false, orderBlackNum: null,
+        orderYellow: false, orderYellowNum: null,
+        orderShorts: false
+      }
+    };
+  } else {
+    if (playerData[name].kits && playerData[name].kits.blackStatus === undefined) {
+      const k = playerData[name].kits;
+      playerData[name].kits = {
+        blackStatus: k.black ? 'owns' : 'none', blackNum: null,
+        yellowStatus: k.yellow ? 'owns' : 'none', yellowNum: null,
+        shorts: k.shorts || false,
+        keeper: k.keeper || (name === 'Tolik'),
+        orderBlack: false, orderBlackNum: null,
+        orderYellow: false, orderYellowNum: null,
+        orderShorts: false
+      };
+    } else if (playerData[name].kits && playerData[name].kits.orderBlack === undefined) {
+      playerData[name].kits.orderBlack = false;
+      playerData[name].kits.orderBlackNum = null;
+      playerData[name].kits.orderYellow = false;
+      playerData[name].kits.orderYellowNum = null;
+      playerData[name].kits.orderShorts = false;
+    }
+  }
 }
 SQUAD.forEach(initPlayer);
 
@@ -744,44 +851,336 @@ function updateProgress() {
 }
 
 // ── KITS ──────────────────────────────────
-function renderKits() {
-  let black=0, yellow=0, keeper=0, nokit=0;
+// ── KIT MODAL STATE ──────────────────────────────────────────────
+let _kmPlayer = null, _kmColor = null, _kmStatus = 'none', _kmNum = null, _kmMode = 'have';
+
+function getTakenNums(color) {
+  const nums = [];
   SQUAD.forEach(n => {
     const k = playerData[n].kits;
-    if (k.black) black++;
-    if (k.yellow) yellow++;
-    if (k.keeper) keeper++;
-    if (!k.black && !k.yellow && !k.keeper) nokit++;
+    const num = color === 'black' ? k.blackNum : k.yellowNum;
+    if (num) nums.push(num);
   });
-  document.getElementById('countBlack').textContent = black;
-  document.getElementById('countYellow').textContent = yellow;
-  document.getElementById('countKeeper').textContent = keeper;
+  spareKits.forEach(s => { if (s.color === color) nums.push(s.num); });
+  return nums;
+}
+
+function openKitModal(name, color, mode) {
+  if (!playerData[name].paid) return;
+  _kmPlayer = name; _kmColor = color; _kmMode = mode || 'have';
+  const k = playerData[name].kits;
+  if (_kmMode === 'have') {
+    _kmStatus = color === 'black' ? k.blackStatus : k.yellowStatus;
+    _kmNum = color === 'black' ? k.blackNum : k.yellowNum;
+    document.getElementById('kmTitle').textContent = name + ' — ' + color.toUpperCase();
+    document.getElementById('kmSub').textContent = 'What they currently have';
+  } else {
+    _kmStatus = (color === 'black' ? k.orderBlack : k.orderYellow) ? 'owns' : 'none';
+    _kmNum = color === 'black' ? k.orderBlackNum : k.orderYellowNum;
+    document.getElementById('kmTitle').textContent = name + ' — ORDER ' + color.toUpperCase();
+    document.getElementById('kmSub').textContent = 'Wants to order this kit';
+  }
+  kmSetStatus(_kmStatus || 'none', false);
+  buildNumGrid();
+  document.getElementById('kitModal').classList.add('open');
+}
+
+function kmSetStatus(s, rebuild) {
+  _kmStatus = s;
+  if (_kmMode === 'have') {
+    document.getElementById('kmOwns').style.display = '';
+    document.getElementById('kmBorrow').style.display = '';
+    document.getElementById('kmOwns').textContent = 'Owns';
+    document.getElementById('kmBorrow').textContent = 'Borrows';
+  } else {
+    document.getElementById('kmOwns').style.display = '';
+    document.getElementById('kmBorrow').style.display = 'none';
+    document.getElementById('kmOwns').textContent = 'Yes, Order';
+    document.getElementById('kmNone').textContent = 'No';
+  }
+  ['Owns','Borrow','None'].forEach(x => {
+    document.getElementById('km'+x).className = 'kit-status-opt' + (_kmStatus === x.toLowerCase() ? ' sel-'+x.toLowerCase() : '');
+  });
+  document.getElementById('kmNumSection').style.display = (s === 'none') ? 'none' : 'block';
+  if (rebuild !== false) buildNumGrid();
+}
+
+function buildNumGrid() {
+  const taken = getTakenNums(_kmColor);
+  const grid = document.getElementById('kmNumGrid');
+  grid.innerHTML = '';
+  for (let i = 1; i <= 99; i++) {
+    const isTaken = taken.includes(i) && i !== _kmNum;
+    const isSelected = i === _kmNum;
+    const cell = document.createElement('div');
+    cell.className = 'num-cell' + (isTaken ? ' taken' : isSelected ? ' selected' : ' available');
+    cell.textContent = i;
+    if (!isTaken) {
+      cell.onclick = () => {
+        _kmNum = i;
+        grid.querySelectorAll('.num-cell').forEach(c => c.classList.remove('selected'));
+        cell.classList.add('selected');
+      };
+    }
+    grid.appendChild(cell);
+  }
+}
+
+function kmSave() {
+  if (!_kmPlayer) return;
+  const k = playerData[_kmPlayer].kits;
+  if (_kmMode === 'have') {
+    if (_kmColor === 'black') { k.blackStatus = _kmStatus; k.blackNum = (_kmStatus !== 'none') ? _kmNum : null; }
+    else { k.yellowStatus = _kmStatus; k.yellowNum = (_kmStatus !== 'none') ? _kmNum : null; }
+  } else {
+    if (_kmColor === 'black') { k.orderBlack = (_kmStatus !== 'none'); k.orderBlackNum = (_kmStatus !== 'none') ? _kmNum : null; }
+    else { k.orderYellow = (_kmStatus !== 'none'); k.orderYellowNum = (_kmStatus !== 'none') ? _kmNum : null; }
+  }
+  document.getElementById('kitModal').classList.remove('open');
+  _kmPlayer = null;
+  saveState();
+  renderKits();
+}
+
+// ── SPARE KITS ────────────────────────────────────────────────────
+let _spareColor = 'black';
+function selSpareColor(c) {
+  _spareColor = c;
+  document.getElementById('spareBlackBtn').className = 'spare-color-btn' + (c==='black' ? ' sel-black' : '');
+  document.getElementById('spareYellowBtn').className = 'spare-color-btn' + (c==='yellow' ? ' sel-yellow' : '');
+}
+
+function addSpare() {
+  const n = parseInt(document.getElementById('spareNumInput').value);
+  if (!n || n < 1 || n > 99) return;
+  const taken = getTakenNums(_spareColor);
+  if (taken.includes(n)) { alert('Number ' + n + ' already taken in ' + _spareColor); return; }
+  spareKits.push({ color: _spareColor, num: n });
+  document.getElementById('spareNumInput').value = '';
+  saveState(); renderKits();
+}
+
+function assignSpare(idx) {
+  const spare = spareKits[idx];
+  const eligible = SQUAD.filter(n => {
+    const k = playerData[n].kits;
+    const status = spare.color === 'black' ? k.blackStatus : k.yellowStatus;
+    return playerData[n].paid && status === 'none';
+  });
+  if (!eligible.length) { alert('No paid players without a ' + spare.color + ' kit.'); return; }
+  const names = eligible.map((n,i) => (i+1)+'. '+n).join('\n');
+  const choice = parseInt(prompt('Assign #' + spare.num + ' ' + spare.color + ' to:\n\n' + names + '\n\nEnter number:'));
+  if (!choice || choice < 1 || choice > eligible.length) return;
+  const player = eligible[choice - 1];
+  const k = playerData[player].kits;
+  if (spare.color === 'black') { k.blackStatus = 'borrow'; k.blackNum = spare.num; }
+  else { k.yellowStatus = 'borrow'; k.yellowNum = spare.num; }
+  spareKits.splice(idx, 1);
+  saveState(); renderKits();
+}
+
+function removeSpare(idx) { spareKits.splice(idx, 1); saveState(); renderKits(); }
+
+// ── RENDER KITS ───────────────────────────────────────────────────
+function renderKits() {
+  let blackCount=0, yellowCount=0, shortsCount=0, keeperCount=0, nokit=0;
+  SQUAD.forEach(n => {
+    const k = playerData[n].kits;
+    if (k.blackStatus && k.blackStatus !== 'none') blackCount++;
+    if (k.yellowStatus && k.yellowStatus !== 'none') yellowCount++;
+    if (k.shorts) shortsCount++;
+    if (k.keeper) keeperCount++;
+    const hasAny = (k.blackStatus && k.blackStatus !== 'none') || (k.yellowStatus && k.yellowStatus !== 'none') || k.shorts || k.keeper;
+    if (!hasAny) nokit++;
+  });
+  document.getElementById('countBlack').textContent = blackCount;
+  document.getElementById('countYellow').textContent = yellowCount;
+  document.getElementById('countShorts').textContent = shortsCount;
+  document.getElementById('countKeeper').textContent = keeperCount;
   document.getElementById('countNoKit').textContent = nokit;
 
+  // Order summary
+  const orderBlackPlayers = SQUAD.filter(n => playerData[n].kits.orderBlack);
+  const orderYellowPlayers = SQUAD.filter(n => playerData[n].kits.orderYellow);
+  const orderShortsPlayers = SQUAD.filter(n => playerData[n].kits.orderShorts);
+  const needKeeper = SQUAD.filter(n => !playerData[n].kits.keeper);
+  const takenB = getTakenNums('black');
+  const takenY = getTakenNums('yellow');
+  const orderBNums = orderBlackPlayers.map(n => playerData[n].kits.orderBlackNum).filter(Boolean).sort((a,b)=>a-b);
+  const orderYNums = orderYellowPlayers.map(n => playerData[n].kits.orderYellowNum).filter(Boolean).sort((a,b)=>a-b);
+  const orderEl = document.getElementById('orderSummary');
+  orderEl.innerHTML = '<div class="order-title">Order Summary</div>' +
+    '<div class="order-line">Black jerseys to order: ' + orderBlackPlayers.length + (orderBlackPlayers.length ? ' (' + orderBlackPlayers.join(', ') + ')' : '') + '</div>' +
+    (orderBNums.length ? '<div class="order-nums">Requested #s: ' + orderBNums.join(', ') + '</div>' : '') +
+    '<div class="order-nums">All taken black #s: ' + (takenB.sort((a,b)=>a-b).join(', ') || 'none') + '</div>' +
+    '<div class="order-line">Yellow jerseys to order: ' + orderYellowPlayers.length + (orderYellowPlayers.length ? ' (' + orderYellowPlayers.join(', ') + ')' : '') + '</div>' +
+    (orderYNums.length ? '<div class="order-nums">Requested #s: ' + orderYNums.join(', ') + '</div>' : '') +
+    '<div class="order-nums">All taken yellow #s: ' + (takenY.sort((a,b)=>a-b).join(', ') || 'none') + '</div>' +
+    '<div class="order-line">Shorts to order: ' + orderShortsPlayers.length + (orderShortsPlayers.length ? ' (' + orderShortsPlayers.join(', ') + ')' : '') + '</div>' +
+    (needKeeper.length > 0 ? '<div class="order-line" style="color:#6ab0ff">Keeper kit: need to order</div>' : '<div class="order-line" style="color:#4caf50">Keeper kit: covered</div>');
+
+  // Player list
   const list = document.getElementById('kitsList');
   list.innerHTML = '';
   SQUAD.forEach(name => {
     const pd = playerData[name];
+    const k = pd.kits;
+    const isPaid = pd.paid;
     const card = document.createElement('div');
     card.className = 'player-kit-card';
 
     const pname = document.createElement('div');
     pname.className = 'player-kit-name';
-    pname.textContent = name;
+    pname.textContent = name + (!isPaid ? ' 🔒' : '');
+    pname.style.color = isPaid ? '#fff' : '#555';
 
     const btns = document.createElement('div');
     btns.className = 'kit-btns';
+    btns.style.gap = '8px';
 
-    [['black','B'],['yellow','Y'],['keeper','K']].forEach(([key, label]) => {
-      const btn = document.createElement('div');
-      btn.className = 'kit-btn' + (pd.kits[key] ? ' on-'+key : '');
-      btn.textContent = label;
-      btn.onclick = () => { pd.kits[key] = !pd.kits[key]; saveState(); renderKits(); };
-      btns.appendChild(btn);
-    });
+    // Black jersey
+    const bCol = document.createElement('div');
+    bCol.className = 'kit-col';
+    const bBtn = document.createElement('div');
+    const bSt = k.blackStatus || 'none';
+    bBtn.className = 'kit-btn' + (bSt==='owns' ? ' on-owns' : bSt==='borrow' ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    bBtn.textContent = bSt==='owns' ? 'B' : bSt==='borrow' ? 'B' : 'B';
+    bBtn.style.fontSize = '0.75rem';
+    bBtn.style.width = '36px'; bBtn.style.height = '36px';
+    bBtn.title = bSt==='owns' ? 'Owns' : bSt==='borrow' ? 'Borrows' : 'No black';
+    if (isPaid) bBtn.onclick = () => openKitModal(name, 'black', 'have');
+    const bNum = document.createElement('div');
+    bNum.className = 'kit-num';
+    bNum.textContent = k.blackNum || '';
+    const bLbl = document.createElement('div');
+    bLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    bLbl.textContent = bSt==='owns'?'OWNS':bSt==='borrow'?'BORR':'—';
+    bCol.appendChild(bBtn); bCol.appendChild(bNum); bCol.appendChild(bLbl);
 
+    // Black order btn
+    const boCol = document.createElement('div');
+    boCol.className = 'kit-col';
+    const boBtn = document.createElement('div');
+    boBtn.className = 'kit-btn' + (k.orderBlack ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    boBtn.textContent = 'B+';
+    boBtn.style.cssText = 'font-size:0.65rem;width:36px;height:36px;';
+    boBtn.title = 'Order black jersey';
+    if (isPaid) boBtn.onclick = () => openKitModal(name, 'black', 'order');
+    const boNum = document.createElement('div');
+    boNum.className = 'kit-num';
+    boNum.textContent = k.orderBlackNum || '';
+    const boLbl = document.createElement('div');
+    boLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    boLbl.textContent = k.orderBlack ? 'ORDER' : '—';
+    boCol.appendChild(boBtn); boCol.appendChild(boNum); boCol.appendChild(boLbl);
+
+    // Yellow jersey
+    const yCol = document.createElement('div');
+    yCol.className = 'kit-col';
+    const yBtn = document.createElement('div');
+    const ySt = k.yellowStatus || 'none';
+    yBtn.className = 'kit-btn' + (ySt==='owns' ? ' on-owns' : ySt==='borrow' ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    yBtn.textContent = 'Y';
+    yBtn.style.fontSize = '0.75rem';
+    yBtn.style.width = '36px'; yBtn.style.height = '36px';
+    if (isPaid) yBtn.onclick = () => openKitModal(name, 'yellow', 'have');
+    const yNum = document.createElement('div');
+    yNum.className = 'kit-num';
+    yNum.textContent = k.yellowNum || '';
+    const yLbl = document.createElement('div');
+    yLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    yLbl.textContent = ySt==='owns'?'OWNS':ySt==='borrow'?'BORR':'—';
+    yCol.appendChild(yBtn); yCol.appendChild(yNum); yCol.appendChild(yLbl);
+
+    // Yellow order btn
+    const yoCol = document.createElement('div');
+    yoCol.className = 'kit-col';
+    const yoBtn = document.createElement('div');
+    yoBtn.className = 'kit-btn' + (k.orderYellow ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    yoBtn.textContent = 'Y+';
+    yoBtn.style.cssText = 'font-size:0.65rem;width:36px;height:36px;';
+    yoBtn.title = 'Order yellow jersey';
+    if (isPaid) yoBtn.onclick = () => openKitModal(name, 'yellow', 'order');
+    const yoNum = document.createElement('div');
+    yoNum.className = 'kit-num';
+    yoNum.textContent = k.orderYellowNum || '';
+    const yoLbl = document.createElement('div');
+    yoLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    yoLbl.textContent = k.orderYellow ? 'ORDER' : '—';
+    yoCol.appendChild(yoBtn); yoNum && yoCol.appendChild(yoNum); yoCol.appendChild(yoLbl);
+
+    // Shorts
+    const sCol = document.createElement('div');
+    sCol.className = 'kit-col';
+    const sBtn = document.createElement('div');
+    sBtn.className = 'kit-btn' + (k.shorts ? ' on-shorts' : '') + (!isPaid ? ' locked' : '');
+    sBtn.textContent = 'S';
+    sBtn.style.fontSize = '0.75rem';
+    sBtn.style.width = '36px'; sBtn.style.height = '36px';
+    if (isPaid) sBtn.onclick = () => { k.shorts = !k.shorts; saveState(); renderKits(); };
+    const sLbl = document.createElement('div');
+    sLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    sLbl.textContent = k.shorts ? 'HAS' : '—';
+    sCol.appendChild(sBtn); sCol.appendChild(sLbl);
+
+    // Keeper
+    const kCol = document.createElement('div');
+    kCol.className = 'kit-col';
+    const kBtn = document.createElement('div');
+    kBtn.className = 'kit-btn' + (k.keeper ? ' on-keeper' : '') + (!isPaid ? ' locked' : '');
+    kBtn.textContent = 'GK';
+    kBtn.style.fontSize = '0.65rem';
+    kBtn.style.width = '36px'; kBtn.style.height = '36px';
+    if (isPaid) kBtn.onclick = () => { k.keeper = !k.keeper; saveState(); renderKits(); };
+    const kLbl = document.createElement('div');
+    kLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    kLbl.textContent = k.keeper ? 'HAS' : '—';
+    kCol.appendChild(kBtn); kCol.appendChild(kLbl);
+
+    // Shorts order toggle
+    const soCol = document.createElement('div');
+    soCol.className = 'kit-col';
+    const soBtn = document.createElement('div');
+    soBtn.className = 'kit-btn' + (k.orderShorts ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    soBtn.textContent = 'S+';
+    soBtn.style.cssText = 'font-size:0.65rem;width:36px;height:36px;';
+    soBtn.title = 'Order shorts';
+    if (isPaid) soBtn.onclick = () => { k.orderShorts = !k.orderShorts; saveState(); renderKits(); };
+    const soLbl = document.createElement('div');
+    soLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
+    soLbl.textContent = k.orderShorts ? 'ORDER' : '—';
+    soCol.appendChild(soBtn); soCol.appendChild(soLbl);
+
+    btns.appendChild(bCol); btns.appendChild(boCol); btns.appendChild(yCol); btns.appendChild(yoCol); btns.appendChild(sCol); btns.appendChild(soCol); btns.appendChild(kCol);
     card.appendChild(pname); card.appendChild(btns);
     list.appendChild(card);
+  });
+
+  // Spare kits
+  const spareEl = document.getElementById('spareList');
+  spareEl.innerHTML = '';
+  if (spareKits.length === 0) {
+    spareEl.innerHTML = '<div style="font-size:0.72rem;color:#444;padding:8px 0;">No spare kits logged yet.</div>';
+  }
+  spareKits.forEach((s, i) => {
+    const row = document.createElement('div');
+    row.className = 'spare-card';
+    const badge = document.createElement('div');
+    badge.className = 'spare-badge ' + (s.color==='black' ? 'sb-black' : 'sb-yellow');
+    badge.textContent = s.color==='black' ? 'BLK' : 'YLW';
+    const num = document.createElement('div');
+    num.className = 'spare-num';
+    num.textContent = '#' + s.num;
+    const assignBtn = document.createElement('button');
+    assignBtn.className = 'spare-assign-btn';
+    assignBtn.textContent = 'Assign';
+    assignBtn.onclick = () => assignSpare(i);
+    const delBtn = document.createElement('button');
+    delBtn.className = 'spare-del-btn';
+    delBtn.textContent = 'X';
+    delBtn.onclick = () => removeSpare(i);
+    row.appendChild(badge); row.appendChild(num); row.appendChild(assignBtn); row.appendChild(delBtn);
+    spareEl.appendChild(row);
   });
 }
 
@@ -813,6 +1212,7 @@ function saveSlot() {
 
 // ── INIT ──────────────────────────────────
 document.getElementById('modal').addEventListener('click', function(e) { if(e.target===this) closeModal(); });
+document.getElementById('kitModal').addEventListener('click', function(e) { if(e.target===this) document.getElementById('kitModal').classList.remove('open'); });
 document.getElementById('newPlayerInput').addEventListener('keydown', function(e) { if(e.key==='Enter') addPlayer(); });
 document.getElementById('amountInput').addEventListener('input', function() { saveState(); updateProgress(); renderPayments(); });
 
@@ -820,6 +1220,7 @@ if (_savedAmount) document.getElementById('amountInput').value = _savedAmount;
 renderLineup();
 updateProgress();
 </script>
+
 <div id="saveToast" style="
   position:fixed; bottom:24px; left:50%; transform:translateX(-50%);
   background:#4caf50; color:#fff; font-family:'Bebas Neue',sans-serif;
