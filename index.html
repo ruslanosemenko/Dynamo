@@ -358,7 +358,7 @@ body {
 /* Kit number modal */
 .kit-modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:200; align-items:flex-end; justify-content:center; }
 .kit-modal.open { display:flex; }
-.kit-modal-box { background:#161616; border-top:3px solid #F5C518; border-radius:14px 14px 0 0; width:100%; max-width:520px; padding:20px 18px 24px; height:80vh; display:flex; flex-direction:column; animation:slideUp 0.2s ease; }
+.kit-modal-box { background:#161616; border-top:3px solid #F5C518; border-radius:14px 14px 0 0; width:100%; max-width:520px; padding:20px 18px 24px; height:85vh; display:flex; flex-direction:column; animation:slideUp 0.2s ease; }
 .kit-modal-title { font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:2px; color:#F5C518; margin-bottom:6px; }
 .kit-modal-sub { font-size:0.65rem; color:#666; letter-spacing:1px; text-transform:uppercase; margin-bottom:14px; }
 .kit-status-row { display:flex; gap:8px; margin-bottom:14px; }
@@ -366,7 +366,7 @@ body {
 .kit-status-opt.sel-owns { border-color:#4caf50; color:#4caf50; background:#0a2000; }
 .kit-status-opt.sel-borrow { border-color:#F5C518; color:#F5C518; background:#2a1a00; }
 .kit-status-opt.sel-none { border-color:#e05c4f; color:#e05c4f; background:#2a0808; }
-.num-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; overflow-y:auto; flex:1; margin-bottom:10px; padding-bottom:4px; min-height:0; }
+.num-grid { display:grid; grid-template-columns:repeat(6,1fr); gap:6px; overflow-y:scroll; flex:1; margin-bottom:10px; padding-bottom:4px; min-height:0; -webkit-overflow-scrolling:touch; }
 .num-cell { height:40px; border-radius:6px; border:1.5px solid #2e2e2e; background:#1a1a1a; display:flex; align-items:center; justify-content:center; font-family:'Bebas Neue',sans-serif; font-size:1rem; color:#555; cursor:pointer; transition:all 0.15s; }
 .num-cell.taken { background:#2a1a1a; border-color:#e05c4f; color:#e05c4f; cursor:not-allowed; }
 .num-cell.selected { background:#0033A0; border-color:#6ab0ff; color:#fff; }
@@ -864,7 +864,6 @@ function getTakenNums(color) {
 }
 
 function openKitModal(name, color, mode) {
-  if (!playerData[name].paid) return;
   _kmPlayer = name; _kmColor = color; _kmMode = mode || 'have';
   const k = playerData[name].kits;
   if (_kmMode === 'have') {
@@ -1029,8 +1028,8 @@ function renderKits() {
 
     const pname = document.createElement('div');
     pname.className = 'player-kit-name';
-    pname.textContent = name + (!isPaid ? ' 🔒' : '');
-    pname.style.color = isPaid ? '#fff' : '#555';
+    pname.textContent = name;
+    pname.style.color = '#fff';
 
     const btns = document.createElement('div');
     btns.className = 'kit-btns';
@@ -1041,12 +1040,12 @@ function renderKits() {
     bCol.className = 'kit-col';
     const bBtn = document.createElement('div');
     const bSt = k.blackStatus || 'none';
-    bBtn.className = 'kit-btn' + (bSt==='owns' ? ' on-owns' : bSt==='borrow' ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    bBtn.className = 'kit-btn' + (bSt==='owns' ? ' on-owns' : bSt==='borrow' ? ' on-borrow' : '') ;
     bBtn.textContent = bSt==='owns' ? 'B' : bSt==='borrow' ? 'B' : 'B';
     bBtn.style.fontSize = '0.7rem';
     bBtn.style.width = '30px'; bBtn.style.height = '30px';
     bBtn.title = bSt==='owns' ? 'Owns' : bSt==='borrow' ? 'Borrows' : 'No black';
-    if (isPaid) bBtn.onclick = () => openKitModal(name, 'black', 'have');
+    bBtn.onclick = () => openKitModal(name, 'black', 'have');
     const bNum = document.createElement('div');
     bNum.className = 'kit-num';
     bNum.textContent = k.blackNum || '';
@@ -1059,11 +1058,11 @@ function renderKits() {
     const boCol = document.createElement('div');
     boCol.className = 'kit-col';
     const boBtn = document.createElement('div');
-    boBtn.className = 'kit-btn' + (k.orderBlack ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    boBtn.className = 'kit-btn' + (k.orderBlack ? ' on-borrow' : '') ;
     boBtn.textContent = 'B+';
     boBtn.style.cssText = 'font-size:0.6rem;width:30px;height:30px;';
     boBtn.title = 'Order black jersey';
-    if (isPaid) boBtn.onclick = () => openKitModal(name, 'black', 'order');
+    boBtn.onclick = () => openKitModal(name, 'black', 'order');
     const boNum = document.createElement('div');
     boNum.className = 'kit-num';
     boNum.textContent = k.orderBlackNum || '';
@@ -1077,11 +1076,11 @@ function renderKits() {
     yCol.className = 'kit-col';
     const yBtn = document.createElement('div');
     const ySt = k.yellowStatus || 'none';
-    yBtn.className = 'kit-btn' + (ySt==='owns' ? ' on-owns' : ySt==='borrow' ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    yBtn.className = 'kit-btn' + (ySt==='owns' ? ' on-owns' : ySt==='borrow' ? ' on-borrow' : '') ;
     yBtn.textContent = 'Y';
     yBtn.style.fontSize = '0.7rem';
     yBtn.style.width = '30px'; yBtn.style.height = '30px';
-    if (isPaid) yBtn.onclick = () => openKitModal(name, 'yellow', 'have');
+    yBtn.onclick = () => openKitModal(name, 'yellow', 'have');
     const yNum = document.createElement('div');
     yNum.className = 'kit-num';
     yNum.textContent = k.yellowNum || '';
@@ -1094,11 +1093,11 @@ function renderKits() {
     const yoCol = document.createElement('div');
     yoCol.className = 'kit-col';
     const yoBtn = document.createElement('div');
-    yoBtn.className = 'kit-btn' + (k.orderYellow ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    yoBtn.className = 'kit-btn' + (k.orderYellow ? ' on-borrow' : '') ;
     yoBtn.textContent = 'Y+';
     yoBtn.style.cssText = 'font-size:0.6rem;width:30px;height:30px;';
     yoBtn.title = 'Order yellow jersey';
-    if (isPaid) yoBtn.onclick = () => openKitModal(name, 'yellow', 'order');
+    yoBtn.onclick = () => openKitModal(name, 'yellow', 'order');
     const yoNum = document.createElement('div');
     yoNum.className = 'kit-num';
     yoNum.textContent = k.orderYellowNum || '';
@@ -1111,11 +1110,11 @@ function renderKits() {
     const sCol = document.createElement('div');
     sCol.className = 'kit-col';
     const sBtn = document.createElement('div');
-    sBtn.className = 'kit-btn' + (k.shorts ? ' on-shorts' : '') + (!isPaid ? ' locked' : '');
+    sBtn.className = 'kit-btn' + (k.shorts ? ' on-shorts' : '') ;
     sBtn.textContent = 'S';
     sBtn.style.fontSize = '0.7rem';
     sBtn.style.width = '30px'; sBtn.style.height = '30px';
-    if (isPaid) sBtn.onclick = () => { k.shorts = !k.shorts; saveState(); renderKits(); };
+    sBtn.onclick = () => { k.shorts = !k.shorts; saveState(); renderKits(); };
     const sLbl = document.createElement('div');
     sLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
     sLbl.textContent = k.shorts ? 'HAS' : '—';
@@ -1125,11 +1124,11 @@ function renderKits() {
     const kCol = document.createElement('div');
     kCol.className = 'kit-col';
     const kBtn = document.createElement('div');
-    kBtn.className = 'kit-btn' + (k.keeper ? ' on-keeper' : '') + (!isPaid ? ' locked' : '');
+    kBtn.className = 'kit-btn' + (k.keeper ? ' on-keeper' : '') ;
     kBtn.textContent = 'GK';
     kBtn.style.fontSize = '0.58rem';
     kBtn.style.width = '30px'; kBtn.style.height = '30px';
-    if (isPaid) kBtn.onclick = () => { k.keeper = !k.keeper; saveState(); renderKits(); };
+    kBtn.onclick = () => { k.keeper = !k.keeper; saveState(); renderKits(); };
     const kLbl = document.createElement('div');
     kLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
     kLbl.textContent = k.keeper ? 'HAS' : '—';
@@ -1139,11 +1138,11 @@ function renderKits() {
     const soCol = document.createElement('div');
     soCol.className = 'kit-col';
     const soBtn = document.createElement('div');
-    soBtn.className = 'kit-btn' + (k.orderShorts ? ' on-borrow' : '') + (!isPaid ? ' locked' : '');
+    soBtn.className = 'kit-btn' + (k.orderShorts ? ' on-borrow' : '') ;
     soBtn.textContent = 'S+';
     soBtn.style.cssText = 'font-size:0.6rem;width:30px;height:30px;';
     soBtn.title = 'Order shorts';
-    if (isPaid) soBtn.onclick = () => { k.orderShorts = !k.orderShorts; saveState(); renderKits(); };
+    soBtn.onclick = () => { k.orderShorts = !k.orderShorts; saveState(); renderKits(); };
     const soLbl = document.createElement('div');
     soLbl.style.cssText = 'font-size:0.5rem;color:#555;letter-spacing:1px;text-transform:uppercase;';
     soLbl.textContent = k.orderShorts ? 'ORDER' : '—';
